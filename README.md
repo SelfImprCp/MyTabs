@@ -12,4 +12,4 @@ allprojects {
     }
 }
 
-   compile 'com.github.SelfImprCp:MyUtil:v1.0.4'
+compile 'com.github.SelfImprCp:MyTabs:0.0.1'
