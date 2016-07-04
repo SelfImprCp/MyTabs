@@ -3,13 +3,17 @@
 
 
     <color name="transparent">#00000000</color>
+
+     <!-- 文字在选择中是为白色，没有选中时为相对色，-->
     <color name="white_cp_util">#FFFFFF</color>
 
 
-    <color name="appbg">#F2F2F8</color>
 
-    <color name="bg_main">#ff7f00</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
 
+    <!--选中是空白部分的颜色-->
+    <color name="yellow">#ff7f00</color>
 
 
 </resources>

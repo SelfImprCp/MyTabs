@@ -8,7 +8,7 @@ import com.cp.mytabs.fragment.Fragment1;
 import com.cp.mytabs.fragment.Fragment2;
 import com.cp.mytabs.fragment.Fragment3;
 
-import com.cp.mytabs.bean.HeaderBeanV2;
+import bean.HeaderBeanV2;
 import fragment.FragmentHeaderTab;
 import infter.IFragmentCreate;
 
