@@ -18,7 +18,10 @@ allprojects {
     }
 }
 
-//注意,这里请设置最新版本 /n
+//注意,这里请设置最新版本
+
+
+
 compile 'com.github.SelfImprCp:MyTabs:0.0.1'
 
 2.实现接口 IFragmentCreate:
