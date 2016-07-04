@@ -23,7 +23,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.cp.viewtab.R;
 
-import bean.HeaderBeanV2;
+import com.cp.mytabs.bean.HeaderBeanV2;
 
 
 /**

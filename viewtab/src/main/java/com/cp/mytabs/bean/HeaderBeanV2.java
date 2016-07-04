@@ -1,4 +1,4 @@
-package bean;
+package com.cp.mytabs.bean;
 
 import android.support.v4.app.Fragment;
 

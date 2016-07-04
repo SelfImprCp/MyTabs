@@ -1,7 +1,5 @@
 package com.cp.mytabs;
 
-import android.app.Activity;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,7 +8,7 @@ import com.cp.mytabs.fragment.Fragment1;
 import com.cp.mytabs.fragment.Fragment2;
 import com.cp.mytabs.fragment.Fragment3;
 
-import bean.HeaderBeanV2;
+import com.cp.mytabs.bean.HeaderBeanV2;
 import fragment.FragmentHeaderTab;
 import infter.IFragmentCreate;
 
