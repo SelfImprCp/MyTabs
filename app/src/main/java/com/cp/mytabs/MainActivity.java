@@ -37,9 +37,9 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
 
     @Override
     public Fragment initFragment() {
-        HeaderBeanV2 hSVip = new HeaderBeanV2("自定义收益率", "SVipFragment", new Fragment1());
-        HeaderBeanV2 hVip = new HeaderBeanV2("个性推荐", "VipFragment", new Fragment2());
-        HeaderBeanV2 hCar = new HeaderBeanV2("基金挑选", "CarFragment", new Fragment3());
+        HeaderBeanV2 hSVip = new HeaderBeanV2("北京", "SVipFragment", new Fragment1());
+        HeaderBeanV2 hVip = new HeaderBeanV2("上海", "VipFragment", new Fragment2());
+        HeaderBeanV2 hCar = new HeaderBeanV2("广州", "CarFragment", new Fragment3());
         return FragmentHeaderTab.newInstance(hSVip, hVip, hCar);
     }
 }
