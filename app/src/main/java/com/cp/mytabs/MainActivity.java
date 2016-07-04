@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
-import com.cp.mylibrary.utils.LogCp;
 import com.cp.mytab.util.MyTabSetting;
 import com.cp.mytabs.fragment.Fragment1;
 import com.cp.mytabs.fragment.Fragment2;
@@ -13,6 +12,10 @@ import com.cp.mytabs.fragment.Fragment3;
 import bean.HeaderBeanV2;
 import fragment.FragmentHeaderTab;
 import infter.IFragmentCreate;
+
+/**
+ *  示例
+ */
 
 public class MainActivity extends FragmentActivity implements IFragmentCreate {
 
@@ -27,7 +30,7 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
 
 
         getSupportFragmentManager().beginTransaction().
-                replace(R.id.fragment_container,fragment)
+                replace(R.id.fragment_container, fragment)
                 .commit();
 
     }
@@ -42,19 +45,26 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
     }
 
 
-
     /**
      *
      */
-    private void initViewPageSetting()
-    {
+    private void initViewPageSetting() {
 
         MyTabSetting myTabSetting = new MyTabSetting();
-
-
-
-        LogCp.i(LogCp.CP,FragmentHeaderTab.class + "取到的颜色 " + myTabSetting.getmTextNormalColor());
-
+        //设置圆角大小
+        myTabSetting.setmCorners(18);
+        //设置边框宽度
+        myTabSetting.setmStrokeWidth(1);
+        //设置边框颜色
+        myTabSetting.setmStrokeColor("#ff7f00");
+        // 设置选中时内部的填充颜色
+        myTabSetting.setmSolidColor("#ff7f00");
+        //设置没有选中时内部填充颜色
+        myTabSetting.setmNoSelectSolidColor("#FFFFFF");
+        //设置选中时文字的颜色
+        myTabSetting.setmTextSelectColor("#FFFFFF");
+        // 设置 没有选中时文字的颜色
+        myTabSetting.setmTextNormalColor("#ff7f00");
 
 
     }

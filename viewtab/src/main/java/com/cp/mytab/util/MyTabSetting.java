@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable;
 
 /**
  * Created by Jerry on 2016/7/4.
+ * 属性设置类
  */
 public class MyTabSetting {
 
@@ -14,7 +15,7 @@ public class MyTabSetting {
     // 边框宽度
     private static int mStrokeWidth = 1;
     //边框颜色
-    private  static String mStrokeColor = "#ff7f00";
+    private static String mStrokeColor = "#ff7f00";
     // 内部填充颜色
     private static String mSolidColor = "#ff7f00";
     //没有选中时内部的填充颜色
@@ -32,8 +33,7 @@ public class MyTabSetting {
      */
     public GradientDrawable getNormalDrableLeft() {
 
-        //  int strokeWidth = 5; // 3dp 边框宽度
-        //  int roundRadius = 15; // 8dp 圆角半径
+
         int strokeColor = Color.parseColor(getmStrokeColor());//边框颜色
         int fillColor = Color.parseColor(getmNoSelectSolidColor());//内部填充颜色
 
@@ -41,7 +41,7 @@ public class MyTabSetting {
         gd.setColor(fillColor);
 
 
-        //  gd.setCornerRadius(getmCorners());
+
         // 为左上，右上，右下，左下。
         float fon[] = {getmCorners(), getmCorners(), 0, 0, 0, 0, getmCorners(), getmCorners()};
         gd.setCornerRadii(fon);
@@ -67,7 +67,7 @@ public class MyTabSetting {
         gd.setColor(fillColor);
 
 
-        //  gd.setCornerRadius(getmCorners());
+
         float fon[] = {0, 0, 0, 0, 0, 0, 0, 0};
         gd.setCornerRadii(fon);
 
@@ -117,7 +117,6 @@ public class MyTabSetting {
         gd.setColor(fillColor);
 
 
-        //  gd.setCornerRadius(getmCorners());
         float fon[] = {getmCorners(), getmCorners(), 0, 0, 0, 0, getmCorners(), getmCorners()};
         gd.setCornerRadii(fon);
 
@@ -141,7 +140,6 @@ public class MyTabSetting {
         gd.setColor(fillColor);
 
 
-        //  gd.setCornerRadius(getmCorners());
         float fon[] = {0, 0, 0, 0, 0, 0, 0, 0};
         gd.setCornerRadii(fon);
 
@@ -166,7 +164,7 @@ public class MyTabSetting {
         gd.setColor(fillColor);
 
 
-        //  gd.setCornerRadius(getmCorners());
+
         float fon[] = {0, 0, getmCorners(), getmCorners(), getmCorners(), getmCorners(), 0, 0};
         gd.setCornerRadii(fon);
 

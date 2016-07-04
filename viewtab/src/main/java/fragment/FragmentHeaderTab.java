@@ -6,12 +6,9 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -27,7 +24,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-import com.cp.mylibrary.utils.LogCp;
 import com.cp.mytab.util.MyTabSetting;
 import com.cp.viewtab.R;
 
@@ -136,8 +132,6 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
         rg = (RadioGroup) view.findViewById(R.id.rg_01);
         rg.setOnCheckedChangeListener(this);
 
-        //		int srceenWidth = ApplicationUtil.getScreenWidth(getActivity());
-        //		srceenWidth = srceenWidth - ApplicationUtil.dip2px(30);
         for (int i = 0; i < itemNums; i++) {
             RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
             params.weight = 1;
@@ -146,13 +140,8 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
             rbtn.setText(items[i].text);
             rbtn.setTextSize(14F);
             rbtn.setGravity(Gravity.CENTER);
-            //getResources().getColorStateList(R.drawable.selector_btn_tv_color,1);
-
-//            ColorStateList color = getResources().getColorStateList(R.drawable.selector_btn_tv_color);
 
             ColorStateList color = createColorStateList(myTabSetting.getmTextNormalColor(), myTabSetting.getmTextSelectColor(), myTabSetting.getmTextSelectColor());
-
-            LogCp.i(LogCp.CP,FragmentHeaderTab.class + "取到的颜色 " + myTabSetting.getmTextNormalColor());
 
             rbtn.setTextColor(color);
 
