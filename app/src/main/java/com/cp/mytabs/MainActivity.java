@@ -21,6 +21,7 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initViewPageSetting();
 
         Fragment fragment = initFragment();
 
@@ -33,7 +34,6 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
 
     @Override
     public Fragment initFragment() {
-        initViewPageSetting();
 
         HeaderBeanV2 hSVip = new HeaderBeanV2("北京", "SVipFragment", new Fragment1());
         HeaderBeanV2 hVip = new HeaderBeanV2("上海", "VipFragment", new Fragment2());
@@ -51,10 +51,6 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
 
         MyTabSetting myTabSetting = new MyTabSetting();
 
-        //没有选中的填充颜色
-        myTabSetting.setmNoSelectSolidColor("#8B4726");
-        // 没有选中时文字 的颜色
-        myTabSetting.setmTextNormalColor("#404040");
 
 
         LogCp.i(LogCp.CP,FragmentHeaderTab.class + "取到的颜色 " + myTabSetting.getmTextNormalColor());
