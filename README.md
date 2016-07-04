@@ -2,8 +2,7 @@
 漂亮的viewpage
 
 效果：
-![ABC](https://raw.githubusercontent.com/allenwong/30DaysofSwift/master/github%20cover.png)
-
+![image](https://github.com/SelfImprCp/MyTabs/blob/master/img/eg.png)
 
 用法：
 1.引入：
