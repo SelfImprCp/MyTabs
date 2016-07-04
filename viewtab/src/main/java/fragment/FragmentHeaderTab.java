@@ -27,6 +27,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
+import com.cp.mylibrary.utils.LogCp;
 import com.cp.mytab.util.MyTabSetting;
 import com.cp.viewtab.R;
 
@@ -39,7 +40,7 @@ import bean.HeaderBeanV2;
 public class FragmentHeaderTab extends Fragment implements OnPageChangeListener, OnCheckedChangeListener {
 
 
-    private MyTabSetting myTabSetting = new MyTabSetting();
+      MyTabSetting myTabSetting = new MyTabSetting();
 
 
     public static FragmentHeaderTab newInstance(HeaderBeanV2... items) {
@@ -151,6 +152,7 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
 
             ColorStateList color = createColorStateList(myTabSetting.getmTextNormalColor(), myTabSetting.getmTextSelectColor(), myTabSetting.getmTextSelectColor());
 
+            LogCp.i(LogCp.CP,FragmentHeaderTab.class + "取到的颜色 " + myTabSetting.getmTextNormalColor());
 
             rbtn.setTextColor(color);
 

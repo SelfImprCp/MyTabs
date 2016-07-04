@@ -10,21 +10,21 @@ public class MyTabSetting {
 
 
     // 圆角大小
-    private int mCorners = 8;
+    private static int mCorners = 8;
     // 边框宽度
-    private int mStrokeWidth = 1;
+    private static int mStrokeWidth = 1;
     //边框颜色
-    private String mStrokeColor = "#ff7f00";
+    private  static String mStrokeColor = "#ff7f00";
     // 内部填充颜色
-    private String mSolidColor = "#ff7f00";
-//没有选中时内部的填充颜色
-    private String mNoSelectSolidColor = "#FFFFFF";
+    private static String mSolidColor = "#ff7f00";
+    //没有选中时内部的填充颜色
+    private static String mNoSelectSolidColor = "#FFFFFF";
 
-   //没有选中时文字的颜色
-    private String mTextNormalColor = "#ff7f00";
+    //没有选中时文字的颜色
+    private static String mTextNormalColor = "#ff7f00";
 
-   //选择时文字 的颜色
-    private String mTextSelectColor = "#FFFFFF";
+    //选择时文字 的颜色
+    private static String mTextSelectColor = "#FFFFFF";
 
 
     /**
