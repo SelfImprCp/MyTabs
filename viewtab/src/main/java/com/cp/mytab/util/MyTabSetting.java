@@ -15,14 +15,14 @@ public class MyTabSetting {
     // 边框宽度
     private static int mStrokeWidth = 1;
     //边框颜色
-    private static String mStrokeColor = "#ff7f00";
+    private static String mStrokeColor = "#269edc";
     // 内部填充颜色
-    private static String mSolidColor = "#ff7f00";
+    private static String mSolidColor = "#269edc";
     //没有选中时内部的填充颜色
     private static String mNoSelectSolidColor = "#FFFFFF";
 
     //没有选中时文字的颜色
-    private static String mTextNormalColor = "#ff7f00";
+    private static String mTextNormalColor = "#269edc";
 
     //选择时文字 的颜色
     private static String mTextSelectColor = "#FFFFFF";
