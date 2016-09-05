@@ -49,22 +49,22 @@ public class MainActivity extends FragmentActivity implements IFragmentCreate {
      *
      */
     private void initViewPageSetting() {
-
         MyTabSetting myTabSetting = new MyTabSetting();
         //设置圆角大小
-        myTabSetting.setmCorners(18);
+        myTabSetting.setmCorners(8);
         //设置边框宽度
-        myTabSetting.setmStrokeWidth(1);
+        myTabSetting.setmStrokeWidth(2);
         //设置边框颜色
-        myTabSetting.setmStrokeColor("#ff7f00");
+        myTabSetting.setmStrokeColor("#269edc");
         // 设置选中时内部的填充颜色
-        myTabSetting.setmSolidColor("#ff7f00");
+        myTabSetting.setmSolidColor("#269edc");
         //设置没有选中时内部填充颜色
         myTabSetting.setmNoSelectSolidColor("#FFFFFF");
         //设置选中时文字的颜色
         myTabSetting.setmTextSelectColor("#FFFFFF");
         // 设置 没有选中时文字的颜色
-        myTabSetting.setmTextNormalColor("#ff7f00");
+        myTabSetting.setmTextNormalColor("#269edc");
+
 
 
     }
