@@ -79,6 +79,15 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
         this.mOnPagerSelectedListener = mOnPagerSelectedListener;
     }
 
+
+     public void setOnClickListener(OnClickListener onClickListener)
+     {
+          this.onClickListener = onClickListener;
+     }
+
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         context = getActivity();
