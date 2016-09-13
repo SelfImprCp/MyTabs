@@ -33,7 +33,7 @@ import bean.HeaderBeanV2;
 /**
  * @author Vance
  */
-public class FragmentHeaderTab extends Fragment implements OnPageChangeListener, OnCheckedChangeListener {
+public class FragmentHeaderTab extends Fragment implements OnPageChangeListener, OnCheckedChangeListener ,View.OnClickListener{
 
 
       MyTabSetting myTabSetting = new MyTabSetting();
@@ -60,6 +60,8 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
     protected int itemNums;
     protected HeaderBeanV2[] items;
     protected OnPagerSelectedListener mOnPagerSelectedListener;
+    protected OnClickListener onClickListener;
+
     RadioGroup rg;
     private int curTab = 0;
 
@@ -139,11 +141,13 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
             rbtn.setLayoutParams(params);
             rbtn.setText(items[i].text);
             rbtn.setTextSize(14F);
+            rbtn.setId(i);
             rbtn.setGravity(Gravity.CENTER);
 
             ColorStateList color = createColorStateList(myTabSetting.getmTextNormalColor(), myTabSetting.getmTextSelectColor(), myTabSetting.getmTextSelectColor());
 
             rbtn.setTextColor(color);
+            rbtn.setOnClickListener(this);
 
 
             rbtn.setButtonDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -231,6 +235,9 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
             viewPager.setCurrentItem(pageIndex);
         }
     }
+
+
+
 
     private class My2FAdapter extends FragmentStatePagerAdapter {
 
@@ -332,10 +339,37 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
                 viewPager.setCurrentItem(i);
                 if (mOnPagerSelectedListener != null)
                     mOnPagerSelectedListener.onPagerSelectedListener(i);
+
+
+
             }
         }
 
     }
+
+
+
+    @Override
+    public void onClick(View v) {
+        for (int i = 0, len = rg.getChildCount(); i < len; i++) {
+            if (v.getId() == rg.getChildAt(i).getId()) {
+
+                if (onClickListener != null)
+                    onClickListener.onClickListener(i);
+
+
+
+            }
+        }
+    }
+
+ public  interface  OnClickListener
+ {
+      public  void onClickListener(int id);
+
+ }
+
+
 
     public interface OnPagerSelectedListener {
         public void onPagerSelectedListener(int id);

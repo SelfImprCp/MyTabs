@@ -1,6 +1,7 @@
 package bean;
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 /**
  * Created by Jerry on 2016/6/24.
@@ -21,6 +22,12 @@ public class HeaderBeanV2 {
 
 
   }
+
+
+
+
+
+
 
 
 }
