@@ -160,6 +160,10 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
 
 
     private void fillIndexUi() {
+
+        rg.removeAllViews();
+
+
         for (int i = 0; i < itemNums; i++) {
             RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
             params.weight = 1;
