@@ -33,10 +33,10 @@ import bean.HeaderBeanV2;
 /**
  * @author Vance
  */
-public class FragmentHeaderTab extends Fragment implements OnPageChangeListener, OnCheckedChangeListener ,View.OnClickListener{
+public class FragmentHeaderTab extends Fragment implements OnPageChangeListener, OnCheckedChangeListener, View.OnClickListener {
 
 
-      MyTabSetting myTabSetting = new MyTabSetting();
+    MyTabSetting myTabSetting = new MyTabSetting();
 
 
     public static FragmentHeaderTab newInstance(HeaderBeanV2... items) {
@@ -80,12 +80,9 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
     }
 
 
-     public void setOnClickListener(OnClickListener onClickListener)
-     {
-          this.onClickListener = onClickListener;
-     }
-
-
+    public void setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
 
 
     @Override
@@ -133,6 +130,20 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
         return index;
     }
 
+
+    public void setIndexTitle(int index, String title) {
+
+        HeaderBeanV2 headerBeanV2 = items[index];
+
+        headerBeanV2.text = title;
+
+
+        fillIndexUi();
+
+
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.f_header_tab, null);
@@ -143,6 +154,12 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
         rg = (RadioGroup) view.findViewById(R.id.rg_01);
         rg.setOnCheckedChangeListener(this);
 
+        fillIndexUi();
+        return view;
+    }
+
+
+    private void fillIndexUi() {
         for (int i = 0; i < itemNums; i++) {
             RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
             params.weight = 1;
@@ -192,7 +209,7 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
             }
             rg.addView(rbtn, i);
         }
-        return view;
+
     }
 
 
@@ -244,8 +261,6 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
             viewPager.setCurrentItem(pageIndex);
         }
     }
-
-
 
 
     private class My2FAdapter extends FragmentStatePagerAdapter {
@@ -350,12 +365,10 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
                     mOnPagerSelectedListener.onPagerSelectedListener(i);
 
 
-
             }
         }
 
     }
-
 
 
     @Override
@@ -367,17 +380,14 @@ public class FragmentHeaderTab extends Fragment implements OnPageChangeListener,
                     onClickListener.onClickListener(i);
 
 
-
             }
         }
     }
 
- public  interface  OnClickListener
- {
-      public  void onClickListener(int id);
+    public interface OnClickListener {
+        public void onClickListener(int id);
 
- }
-
+    }
 
 
     public interface OnPagerSelectedListener {
